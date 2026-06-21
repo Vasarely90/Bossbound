@@ -1,9 +1,8 @@
 {
-  "name": "bossbound-site",
+  "name": "bossbound-coming-soon",
   "version": "1.0.0",
   "private": true,
-  "description": "Bossbound one-page coming soon website for Netlify.",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html _redirects dist/ && cp -r css js assets dist/"
+    "build": "rm -rf dist && mkdir -p dist && cp -R index.html css assets dist/"
   }
 }
