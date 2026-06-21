@@ -1,27 +1,24 @@
-# Bossbound one-page website
+[build]
+  command = ""
+  publish = "."
 
-Statische one-page website voor **Bossbound — Boss Rush RPG**.
+[build.environment]
+  NODE_VERSION = "20"
 
-## Uploaden naar GitHub
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-1. Maak een nieuwe GitHub repository aan, bijvoorbeeld `bossbound-site`.
-2. Upload alle bestanden uit deze map naar de repository.
-3. Commit de bestanden.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-## Hosten op Netlify
-
-1. Ga naar Netlify.
-2. Kies **Add new site** → **Import an existing project**.
-3. Koppel je GitHub repository.
-4. Build command leeg laten.
-5. Publish directory: `.`
-6. Deploy.
-
-## Aanpassen
-
-- Teksten: `index.html`
-- Kleuren/layout: `css/style.css`
-- Menu mobiel: `js/app.js`
-- Afbeeldingen: `assets/images/`
-
-De nieuwsbrief gebruikt Netlify Forms via het formulier `bossbound-updates`.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

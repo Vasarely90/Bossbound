@@ -1,0 +1,33 @@
+# Bossbound - Netlify ready one-page website
+
+Deze map is direct geschikt voor **GitHub + Netlify**.
+
+## Deploy via GitHub + Netlify
+
+1. Maak een nieuwe GitHub repository aan, bijvoorbeeld `bossbound-site`.
+2. Upload de inhoud van deze map naar de repository. Zorg dat `index.html` direct in de hoofdmap staat.
+3. Ga naar Netlify.
+4. Kies **Add new site** → **Import an existing project**.
+5. Kies je GitHub repository.
+6. Gebruik deze instellingen:
+   - **Build command:** leeg laten of `npm run build`
+   - **Publish directory:** `.`
+7. Klik op **Deploy site**.
+
+## Deploy via Netlify drag-and-drop
+
+Sleep de volledige map `bossbound-netlify-ready` naar Netlify Drop. Niet alleen de losse `index.html`.
+
+## Belangrijk
+
+- `netlify.toml` staat klaar voor Netlify.
+- `_redirects` staat klaar voor one-page routing.
+- Het formulier gebruikt Netlify Forms: `bossbound-updates`.
+- Alle paden zijn relatief, dus geschikt voor GitHub Pages-achtige hosting en Netlify.
+
+## Aanpassen
+
+- Tekst en secties: `index.html`
+- Styling/kleuren: `css/style.css`
+- Mobiel menu: `js/app.js`
+- Afbeeldingen: `assets/images/`

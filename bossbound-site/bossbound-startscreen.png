@@ -1,0 +1,9 @@
+{
+  "name": "bossbound-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bossbound one-page coming soon website for Netlify.",
+  "scripts": {
+    "build": "echo 'Static site: no build step required'"
+  }
+}
