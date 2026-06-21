@@ -1,6 +1,6 @@
 # Bossbound Coming Soon
 
-One-page Netlify website met groot Bossbound-logo en Coming Soon tekst.
+One-page Netlify website met groot Bossbound-logo, Coming Soon tekst en dark fantasy achtergrond.
 
 ## Netlify instellingen
 
@@ -28,3 +28,5 @@ _redirects
 css/
 assets/
 ```
+
+Daarna in Netlify: **Deploys → Trigger deploy → Clear cache and deploy site**.
