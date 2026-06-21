@@ -1,34 +1,41 @@
-# Bossbound website - Netlify fixed
+# Bossbound website — Netlify ready
 
-Deze versie is geschikt voor GitHub + Netlify.
+Deze versie is aangepast zodat het Bossbound-logo op de website een echte afbeelding is in plaats van gewone tekst.
 
-## Belangrijk
-De `index.html` staat in de hoofdmap. Netlify bouwt automatisch een `dist` map en publiceert die map.
+## Netlify instellingen
 
-## GitHub + Netlify stappen
-1. Pak deze ZIP uit.
-2. Upload de inhoud naar je GitHub repository. Let op: `index.html`, `package.json` en `netlify.toml` moeten direct in de hoofdmap van je repository staan.
-3. Ga in Netlify naar **Site configuration** > **Build & deploy**.
-4. Zet:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-5. Klik op **Trigger deploy** > **Deploy site**.
+Build command:
 
-## Krijg je nog 404?
-Controleer dan of je niet per ongeluk de map `bossbound-netlify-fixed` als submap in GitHub hebt gezet. De bestanden moeten zo staan:
-
-```text
-/index.html
-/package.json
-/netlify.toml
-/_redirects
-/css/style.css
-/js/app.js
-/assets/images/...
+```bash
+npm run build
 ```
 
-Niet zo:
+Publish directory:
 
 ```text
-/bossbound-netlify-fixed/index.html
+dist
 ```
+
+## Upload via GitHub
+
+Zet deze bestanden direct in de hoofdmap van je repository:
+
+```text
+index.html
+package.json
+netlify.toml
+_redirects
+css/
+js/
+assets/
+README.md
+```
+
+Daarna in Netlify: **Deploys → Trigger deploy → Clear cache and deploy site**.
+
+## Wat is aangepast
+
+- Header gebruikt nu `assets/images/bossbound-logo-header.png`
+- Hero gebruikt nu `assets/images/bossbound-logo-full.png`
+- Footer gebruikt nu ook het echte logo
+- `dist` wordt automatisch opnieuw opgebouwd via `npm run build`
